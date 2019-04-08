@@ -56,7 +56,7 @@ happy_agg = pd.pivot_table(happy, index= 'Region', values= "Happiness Score",agg
 print("\n")
 print(happy_agg)
 
-#manipulando utilizando funções agregadas e uma função lambda para determinar o número médio de países numa determinada região nun dado ano
+#manipulando utilizando funções agregadas e uma função lambda para determinar o número médio de países numa determinada região num dado ano
 happy_agg_lambda = pd.pivot_table(happy, index = 'Region', values="Happiness Score",aggfunc= [np.mean, min, max, np.std, lambda x: x.count()/3])
 print("\n")
 print(happy_agg_lambda)
